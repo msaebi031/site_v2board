@@ -401,15 +401,15 @@ CREATE TABLE `v2_user` (
                            UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `buyinvite_bot`;
-CREATE TABLE `buyinvite_bot` (
+DROP TABLE IF EXISTS `buyinvite_bots`;
+CREATE TABLE `buyinvite_bots` (
                            `id` bigint NOT NULL,
                            `price` int(11) DEFAULT '0',  
                            PRIMARY KEY (`id`)               
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `faktor`;
-CREATE TABLE `faktor` (
+DROP TABLE IF EXISTS `faktors`;
+CREATE TABLE `faktors` (
                            `id` int NOT NULL AUTO_INCREMENT,
                            `price` int(11) NOT NULL,  
                            `time` varchar(25) NOT NULL,
@@ -430,8 +430,8 @@ CREATE TABLE `gifts` (
                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `pay_bot`;
-CREATE TABLE `pay_bot` (
+DROP TABLE IF EXISTS `pay_bots`;
+CREATE TABLE `pay_bots` (
                            `id` int NOT NULL AUTO_INCREMENT,
                            `chat_id` bigint NOT NULL,  
                            `amount` int(11) NOT NULL,
@@ -443,8 +443,8 @@ CREATE TABLE `pay_bot` (
                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `sendAll_bot`;
-CREATE TABLE `sendAll_bot` (
+DROP TABLE IF EXISTS `sendAll_bots`;
+CREATE TABLE `sendAll_bots` (
                            `id` int NOT NULL AUTO_INCREMENT,
                            `step` varchar(20) DEFAULT NULL,  
                            `text` text DEFAULT NULL,
@@ -453,8 +453,8 @@ CREATE TABLE `sendAll_bot` (
                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `setting_bot`;
-CREATE TABLE `setting_bot` (
+DROP TABLE IF EXISTS `setting_bots`;
+CREATE TABLE `setting_bots` (
                            `id` int NOT NULL AUTO_INCREMENT,
                            `serviseFree` int(11) DEFAULT NULL,  
                            `priceUpgerate` text DEFAULT NULL,
@@ -462,8 +462,8 @@ CREATE TABLE `setting_bot` (
                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `users_bot`;
-CREATE TABLE `users_bot` (
+DROP TABLE IF EXISTS `users_bots`;
+CREATE TABLE `users_bots` (
                            `autoId` int NOT NULL,
                            `id` bigint NOT NULL,
                            `price` int(11) DEFAULT '0',  
